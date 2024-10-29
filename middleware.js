@@ -1,20 +1,20 @@
-import { next } from '@vercel/edge';
+// import { next } from '@vercel/edge';
 
 let sections = document.querySelectorAll('section');
 let navLinks = document.querySelectorAll('header nav a');
 
-export default function middleware(req) {
-  return next({
-    headers: {
-      'Referrer-Policy': 'origin-when-cross-origin',
-      'X-Frame-Options': 'DENY',
-      'X-Content-Type-Options': 'nosniff',
-      'X-DNS-Prefetch-Control': 'on',
-      'Strict-Transport-Security':
-        'max-age=31536000; includeSubDomains; preload',
-    },
-  });
-}
+// export default function middleware(req) {
+//   return next({
+//     headers: {
+//       'Referrer-Policy': 'origin-when-cross-origin',
+//       'X-Frame-Options': 'DENY',
+//       'X-Content-Type-Options': 'nosniff',
+//       'X-DNS-Prefetch-Control': 'on',
+//       'Strict-Transport-Security':
+//         'max-age=31536000; includeSubDomains; preload',
+//     },
+//   });
+// }
 
 window.onscroll = () => {
     sections.forEach(sec => {
